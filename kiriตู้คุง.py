@@ -38,7 +38,34 @@ while i <= num:
     else:
         print("you want to use your own hand??? go back and choose again")
     i=i+1
-    if monster == 0:
+
+    
+    if monster != 0:
+            print("พี่ก็ตีเบาเกิน บอสยังไม่ตายเลย")
+            weapon = int(input("รอบนี้เลือกอาวุธเลข??? "))
+            num = int(input("ตีกี่รอบจ๊ะ "))
+
+            monsterleft = monster
+            
+            if weapon == 1:
+                monster = monsterleft - weapon1
+                print(f"ครั้งที่ {i} hp left", monster)
+            elif weapon == 2:
+                monster = monsterleft - weapon2
+                print(f"ครั้งที่ {i} hp left", monster)
+            elif weapon == 3:
+                monster = monsterleft - weapon3
+                print(f"ครั้งที่ {i} hp left", monster)
+            elif weapon == 4:
+                monster = monsterleft - weapon4
+                print(f"ครั้งที่ {i} hp left", monster)    
+            if monster == 0:
+                print("BOSS DEFEATED")
+            else:
+                print("YOU DEAD WHY SO NOOB")
+        
+
+    elif monster == 0:
             print("BOSS DEFEATED")
     elif monster < 0:
             print("พี่ก็ตีแรงเกิน บอสเลือดติดลบสกิลทำงาน")
